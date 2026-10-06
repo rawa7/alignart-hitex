@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0F1420">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>AlignArt Lucky Bag · HITEX</title>
+  <meta name="description" content="Pull a lucky paper from the AlignArt bag and win up to 12 months of AlignArt Premium free.">
+  <meta property="og:title" content="AlignArt Lucky Bag · HITEX">
+  <meta property="og:description" content="Pull a lucky paper and win up to 12 months of AlignArt Premium free.">
+  <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/app-icon-512.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="assets/fonts/Poppins-Bold.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg" aria-hidden="true">
+    <div class="bg-rays"></div>
+    <div class="bg-glow"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-dots"></div>
+  </div>
+
+  <header class="topbar">
+    <button class="brand" id="brand" type="button" aria-label="AlignArt">
+      <img src="assets/alignart-logo-on-dark.png" alt="AlignArt" width="1200" height="191">
+    </button>
+    <span class="event-pill"><span class="live-dot" aria-hidden="true"></span>HITEX 2026</span>
+    <div class="controls">
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="ckb" lang="ckb">کوردی</button>
+        <button type="button" data-lang="ar" lang="ar">عربي</button>
+      </div>
+      <button class="icon-btn" id="soundBtn" type="button" aria-pressed="true" aria-label="Sound">
+        <svg class="i-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+        <svg class="i-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="m22 9-6 6"/><path d="m16 9 6 6"/></svg>
+      </button>
+      <button class="icon-btn" id="fullscreenBtn" type="button" aria-label="Full screen">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5"/><path d="M20 9V4h-5"/><path d="M4 15v5h5"/><path d="M20 15v5h-5"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="stage">
+    <div class="intro">
+      <p class="eyebrow" data-i18n="eyebrow"></p>
+      <h1 data-i18n="title"></h1>
+      <p class="sub" data-i18n="subtitle"></p>
+    </div>
+
+    <div class="bag-area">
+      <div class="bag-halo" aria-hidden="true"></div>
+      <button class="bag" id="bag" type="button" data-i18n-aria="tapHint">
+        <svg class="bag-layer bag-back" viewBox="0 0 400 440" aria-hidden="true">
+          <defs>
+            <radialGradient id="gInside" cx="50%" cy="65%" r="70%">
+              <stop offset="0" stop-color="#1A0703"/>
+              <stop offset="0.7" stop-color="#4A1607"/>
+              <stop offset="1" stop-color="#7A2A10"/>
+            </radialGradient>
+            <linearGradient id="gSlip" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#FFFDF8"/>
+              <stop offset="1" stop-color="#F3E7D6"/>
+            </linearGradient>
+          </defs>
+          <ellipse cx="200" cy="120" rx="120" ry="30" fill="url(#gInside)"/>
+          <path d="M80 120 A120 30 0 0 1 320 120" fill="none" stroke="#D9461A" stroke-width="16" stroke-linecap="round"/>
+          <path d="M92 112 A110 24 0 0 1 308 112" fill="none" stroke="#B8380F" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+          <g class="idle-slips">
+            <g transform="rotate(-20 140 150)"><g class="idle-slip" style="--d:0s"><rect x="104" y="84" width="72" height="76" rx="5" fill="url(#gSlip)"/><path d="M104 122h72" stroke="#E2D2BC" stroke-width="1.5"/><path d="M134 104l6-9 6 9" fill="none" stroke="#FC5A2C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+            <g transform="rotate(-5 180 150)"><g class="idle-slip" style="--d:.7s"><rect x="146" y="70" width="72" height="88" rx="5" fill="url(#gSlip)"/><path d="M146 114h72" stroke="#E2D2BC" stroke-width="1.5"/><path d="M176 90l6-9 6 9" fill="none" stroke="#FC5A2C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+            <g transform="rotate(11 225 150)"><g class="idle-slip" style="--d:1.3s"><rect x="196" y="76" width="72" height="84" rx="5" fill="url(#gSlip)"/><path d="M196 118h72" stroke="#E2D2BC" stroke-width="1.5"/><path d="M226 96l6-9 6 9" fill="none" stroke="#FC5A2C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+            <g transform="rotate(24 262 150)"><g class="idle-slip" style="--d:.35s"><rect x="232" y="92" width="72" height="68" rx="5" fill="url(#gSlip)"/><path d="M232 126h72" stroke="#E2D2BC" stroke-width="1.5"/><path d="M262 112l6-9 6 9" fill="none" stroke="#FC5A2C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+          </g>
+        </svg>
+
+        <span class="slip" id="slip" aria-hidden="true"></span>
+
+        <svg class="bag-layer bag-front" viewBox="0 0 400 440" aria-hidden="true">
+          <defs>
+            <linearGradient id="gBody" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#A3320C"/>
+              <stop offset="0.28" stop-color="#E9501F"/>
+              <stop offset="0.48" stop-color="#FF7A4D"/>
+              <stop offset="0.66" stop-color="#FC5A2C"/>
+              <stop offset="1" stop-color="#9A300C"/>
+            </linearGradient>
+            <linearGradient id="gShade" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#000" stop-opacity="0"/>
+              <stop offset="0.75" stop-color="#000" stop-opacity="0.05"/>
+              <stop offset="1" stop-color="#000" stop-opacity="0.32"/>
+            </linearGradient>
+            <linearGradient id="gRim" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#E04B1C"/>
+              <stop offset="0.5" stop-color="#FF946B"/>
+              <stop offset="1" stop-color="#E04B1C"/>
+            </linearGradient>
+            <clipPath id="cBody">
+              <path id="bodyPath" d="M80 120 C82 145 96 160 96 178 C96 200 34 245 36 320 C38 395 110 432 200 432 C290 432 362 395 364 320 C366 245 304 200 304 178 C304 160 318 145 320 120 A120 30 0 0 1 80 120 Z"/>
+            </clipPath>
+          </defs>
+          <g clip-path="url(#cBody)">
+            <rect width="400" height="440" fill="url(#gBody)"/>
+            <rect width="400" height="440" fill="url(#gShade)"/>
+            <g fill="none" stroke="#7A2508" stroke-linecap="round" opacity="0.28" stroke-width="3">
+              <path d="M128 205 C112 260 104 330 120 410"/>
+              <path d="M272 205 C292 260 298 330 282 410"/>
+              <path d="M170 215 C164 270 166 340 176 425"/>
+              <path d="M232 215 C238 270 236 340 226 425"/>
+            </g>
+            <g fill="none" stroke="#FFFFFF" stroke-linecap="round" opacity="0.14" stroke-width="10">
+              <path d="M150 230 C140 280 138 330 148 380"/>
+            </g>
+          </g>
+          <path d="M320 120 A120 30 0 0 1 80 120" fill="none" stroke="url(#gRim)" stroke-width="18" stroke-linecap="round"/>
+          <path d="M310 128 A110 24 0 0 1 90 128" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.35"/>
+
+          <path d="M94 178 A106 22 0 0 0 306 178" fill="none" stroke="#F1DEC8" stroke-width="8" stroke-linecap="round"/>
+          <path d="M94 178 A106 22 0 0 0 306 178" fill="none" stroke="#B89A7A" stroke-width="8" stroke-dasharray="2 5" stroke-linecap="butt" opacity="0.7"/>
+          <g class="tassels">
+            <path d="M196 204 C190 228 182 244 176 264" fill="none" stroke="#F1DEC8" stroke-width="6" stroke-linecap="round"/>
+            <path d="M204 204 C212 228 220 244 228 262" fill="none" stroke="#F1DEC8" stroke-width="6" stroke-linecap="round"/>
+            <path d="M168 262 l8 -6 l8 6 l-3 22 h-10 Z" fill="#F1DEC8"/>
+            <path d="M220 260 l8 -6 l8 6 l-3 22 h-10 Z" fill="#F1DEC8"/>
+          </g>
+          <circle cx="200" cy="200" r="11" fill="#F1DEC8"/>
+          <circle cx="200" cy="200" r="11" fill="none" stroke="#B89A7A" stroke-width="2" stroke-dasharray="3 3"/>
+
+          <g transform="translate(152 282) scale(1.5)" opacity="0.95">
+            <path d="M13 51 L32 12 L51 51" fill="none" stroke="#FFF4EA" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M32 33 L39 51 L25 51 Z" fill="#FFF4EA" stroke="#FFF4EA" stroke-width="4" stroke-linejoin="round"/>
+          </g>
+          <text x="200" y="392" text-anchor="middle" class="bag-word">ALIGNART</text>
+        </svg>
+      </button>
+      <div class="bag-shadow" aria-hidden="true"></div>
+      <span class="tap-hint" id="tapHint" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V10"/><path d="M12 10V8.5a1.5 1.5 0 0 1 3 0V11"/><path d="M15 10.5a1.5 1.5 0 0 1 3 0V15a6 6 0 0 1-6 6h-1a6 6 0 0 1-4.8-2.4L3.6 15a1.5 1.5 0 0 1 2.3-1.9L9 16V11"/></svg>
+        <span data-i18n="tapHint"></span>
+      </span>
+    </div>
+
+    <button class="cta" id="drawBtn" type="button">
+      <span class="cta-label" data-i18n="draw"></span>
+    </button>
+
+    <section class="prizes" aria-labelledby="prizesLabel">
+      <h2 id="prizesLabel" data-i18n="prizesLabel"></h2>
+      <ul class="prize-strip" id="prizeStrip"></ul>
+    </section>
+  </main>
+
+  <div class="reveal" id="reveal" hidden>
+    <div class="reveal-backdrop"></div>
+    <canvas class="confetti" id="confetti" aria-hidden="true"></canvas>
+    <div class="reveal-content" role="dialog" aria-modal="true" aria-labelledby="ticketTitle">
+      <div class="ticket-wrap" id="ticketWrap">
+        <div class="ticket" id="ticket">
+          <div class="t-half t-top" id="ticketTop">
+            <div class="face front paper"><div class="slot-top" id="slotTop"></div></div>
+            <div class="face back"><div class="back-art"><img src="assets/logo-mark.svg" alt=""><span>HITEX</span></div></div>
+          </div>
+          <div class="t-half t-bottom paper">
+            <div class="slot-bottom" id="slotBottom"></div>
+            <div class="fold-shade" id="foldShade"></div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal-actions" id="revealActions">
+        <form class="staff-note" id="staffNote" autocomplete="off">
+          <label for="staffInput" data-i18n="staffNote"></label>
+          <div class="staff-row">
+            <input id="staffInput" type="text" inputmode="text" maxlength="80">
+            <button type="submit" class="ghost-btn" data-i18n="save"></button>
+          </div>
+        </form>
+        <button class="cta" id="nextBtn" type="button"><span data-i18n="next"></span></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="admin" id="admin" hidden>
+    <div class="admin-panel" role="dialog" aria-modal="true" aria-labelledby="adminTitle">
+      <div class="admin-head">
+        <h2 id="adminTitle">Staff panel</h2>
+        <button class="icon-btn" id="adminClose" type="button" aria-label="Close">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></svg>
+        </button>
+      </div>
+
+      <section class="admin-section">
+        <h3>Results on this device</h3>
+        <p class="admin-total" id="adminTotal"></p>
+        <table class="admin-table" id="adminStats">
+          <thead><tr><th>Paper</th><th>Odds</th><th>Drawn</th><th>Actual</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <section class="admin-section">
+        <h3>Odds (% of all papers)</h3>
+        <p class="admin-hint">Values are normalized, so they don't have to add up to exactly 100.</p>
+        <div class="odds-grid" id="oddsGrid"></div>
+        <p class="admin-sum" id="oddsSum"></p>
+        <div class="admin-row">
+          <button class="ghost-btn" id="oddsReset" type="button">Restore default odds</button>
+        </div>
+      </section>
+
+      <section class="admin-section">
+        <div class="admin-row between">
+          <h3>Recent draws</h3>
+          <div class="admin-row">
+            <button class="ghost-btn" id="exportCsv" type="button">Export CSV</button>
+            <button class="ghost-btn danger" id="clearHistory" type="button">Clear</button>
+          </div>
+        </div>
+        <input class="admin-search" id="historySearch" type="search" placeholder="Check a prize code or note…" aria-label="Check a prize code or note">
+        <ol class="history" id="history"></ol>
+      </section>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

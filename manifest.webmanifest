@@ -1,0 +1,14 @@
+{
+  "name": "AlignArt Lucky Bag · HITEX",
+  "short_name": "Lucky Bag",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "any",
+  "background_color": "#0F1420",
+  "theme_color": "#0F1420",
+  "icons": [
+    { "src": "assets/app-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/logo-mark.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
